@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="#" method="POST">
+<!-- 당장 갈데 없을때 #로 걸어둠. -->
+        # 아이디: <input type="text" value="abc1234"> <br>
+        # 비밀번호: <input type="password"> <br>
+        # 이메일: <input type="email" placeholder="xxx@yyy.com"> <br>
+
+        #취미: 
+        <input type="checkbox">공부
+        <input type="checkbox">게임
+        <input type="checkbox">영화보기<br>
+
+        #이메일 수신 여부:
+        <input type="radio" name="email-verify" checked> 예
+        <input type="radio" name="email-verify" disabled> 아니오 <br>
+<!-- 둘이 하나의 팀이다 라고 얘기를 해줘야함 그래야 하나 누르면 하나는 풀리게. name속성 부여. -->
+<!-- 옵션 "checked" -> 미리 체크해놓음. checkbox에서도 가능. -->
+
+        #파일:
+        <input type="file"> <br>
+
+        #평점
+        <input type="range" min="0" max="5" value="3"> <br>
+
+        #주문 수량:
+        <input type="number" value="1"> <br>
+
+        #
+        <input type="hidden" value="메롱">
+        <!-- 사용자에게는 보이지 않고 서버에 전송할 데이터(ip, 글쓴시간, 이런 정보들) -->
+
+        <button type="button">그냥버튼</button>
+        <!-- 공버튼, 자바스크립트 붙여서 내 입맛대로 만드는거 -->
+        <button type="submit">전송버튼</button>
+        <!-- 서버로 이제껏 입력한 데이터를 넘기는 버튼 -->
+        <button type="reset">초기화버튼</button>
+        <!-- 쓴거 마음에 안들때 다시 처음부터 초기화 -->
+        <input type="button" value="인풋버튼">
+        <!-- buttton 말고 input으로 써도 똑같음. 차이점은 버튼은 이미지 넣을때 닫는태그가 있어서 이미지 버튼같은거 만들때 편함 버튼 쓰는 추세.-->
+   </form>
+
+
+</body>
+</html>
