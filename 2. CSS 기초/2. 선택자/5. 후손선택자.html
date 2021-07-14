@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     /* class orange에 먹일건데, 조상이 div (직속 : 조상이자 부모이기도함. 반대는 자식이면서 후손) */
+     /* 자식보다 후손선택자를 쓰는게 더 좋음.(중간에 뭐 껴도 안바뀌어서 안정적임) */
+        div .orange{
+            color: orange;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <em>안녕안녕</em>
+
+    <!-- emmet 문법 (div>ul>li*3 + 엔터) -->
+    <div>
+        <em>메롱메롱</em>
+        <ul>
+            <em>잘가잘가</em>
+            <li id="apple">사과</li>
+            <!-- id는 중복되면 안됨. 한개만 줘야함. class는 줘도되고. 차이점. -->
+            <li >딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <!-- (div+p+span +탭) -->
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+        
+    </div>
+    
+</body>
+</html>

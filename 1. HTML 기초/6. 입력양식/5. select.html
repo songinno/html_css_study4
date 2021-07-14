@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+
+        <select>
+            <optgroup label="coffee">
+            <option>Americano</option>
+            <option selected>Caffe Latte</option>
+            <option disabled>Cappuccion</option>
+            </optgroup>
+            
+            <optgroup label="juice">
+            <option>Orange Juice</option>
+            <option>Lime Juice</option>
+            </optgroup>
+            
+
+
+        </select>
+        <br>
+        <!-- 자동완성기능. 실질적으로 이렇게 써놓지는 않음. 실시간으로 가져와서 하게해놓음. 기본틀만알아둘것. -->
+        <input type="text" list="fruits">
+           
+        <datalist id="fruits">
+            <option>apple</option>
+            <option>orange</option>
+            <option>mango</option>
+            <option>pineapple</option>
+            <option>peach</option>
+            <option>grape</option>
+        </datalist>
+
+
+    </form>
+
+    <!-- 특수기호 -->
+    <p>
+        안녕                     하세요<br>
+        안녕&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;하세요
+
+        <div>태그는 아무 의미가 없습니다.<br>
+        &lt;div&gt;태그는 아무 의미가 없습니다.    
+    </p>
+
+
+
+</body>
+</html>

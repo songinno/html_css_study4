@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     /* 복합 선택자는 맨 뒤에 선택자에게 스타일이 적용되며, 그 앞의 선택자는 조건을 의미합니다.->class orange한테 먹인다는 뜻 */
+     /* >는 .orange가 ul의 자식이어야 한다는 조건. */
+        ul > .orange{
+            background: orange;
+        }
+/* div의 자식인 em한테만 적용 */
+        div > em{
+            font-size: 3em;
+            color: gray;
+        }
+
+        
+        section > ul > li.orange{
+            font-style: italic;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <em>안녕안녕</em>
+
+    <!-- emmet 문법 (div>ul>li*3 + 엔터) -->
+    <section>
+        <em>메롱메롱</em>
+        <ul>
+            <em>잘가잘가</em>
+            <li id="apple">사과</li>
+            <!-- id는 중복되면 안됨. 한개만 줘야함. class는 줘도되고. 차이점. -->
+            <li >딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <!-- (div+p+span +탭) -->
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+        
+    </section>
+    
+</body>
+</html>

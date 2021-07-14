@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <form action="#">
+       <!-- (신규 방법) -->
+        <label>
+        <input type="checkbox">자동로그인
+        </label><br>
+        
+        <label>
+        #아이디: <input type="text" name="id" placeholder="아이디를 입력">
+        </label>
+
+        <!-- 기존에 하던 방법(아래):텍스트만 레이블로 가두고 id를 부여해서 for로 id 적용하기. -->
+        <input type="checkbox" id="auto">
+        <lable for="auto"> 자동로그인 </lable><br>
+
+<!-- input vs button 비교 -->
+        <input type="button" value="버튼1">
+        <button>버튼1</button>
+   </form> 
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 모든 태그의 글꼴을 바꾸고 싶을때(*은 모든 태그, body는 글자관련?) */
+        *{
+            font-family: monospace;
+        }
+        body{
+            color: orange;
+        }
+        /* [ul 띄고 *] ul태그 자손들 모두에게 적용 */
+        ul * {
+            background: tomato;
+        }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <!-- emmet 문법 (div>ul>li*3 + 엔터) -->
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+        </ul>
+        <!-- (div+p+span +탭) -->
+        <div>당근</div>
+        <p>토마토</p>
+        <span>오렌지</span>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 태그 이름이 span이면서, class는 orange인것 */
+       span.orange{
+        background: tomato;
+       }
+
+       /* 태그는 li, class는 orange인것 */
+       li.orange{
+           background: orange;
+       }
+       /* 태그는 li, id는 apple */
+       li#apple{
+            background: red;
+       }
+       /* 일치선택자는 띄우면 안됨. 의미가 달라짐. 다 붙여써야함*/
+       div #apple{
+           background: red;
+       }
+
+       a.btn.primary.low#change{
+           color: gray;
+       }
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+    <!-- emmet 문법 (div>ul>li*3 + 엔터) -->
+    <div>
+        <ul>
+            <li id="apple">사과</li>
+            <!-- id는 중복되면 안됨. 한개만 줘야함. class는 줘도되고. 차이점. -->
+            <li >딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <!-- (div+p+span +탭) -->
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+ 
+    </div>
+    <a href="#" class="btn primary low" id="change">안녕</a>
+</body>
+</html>
