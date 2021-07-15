@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        ul li{
+            color: red;
+        }
+        /* 앞에 번호라는 글씨 넣는걸 까먹었을때 */
+        /* 번호라는 말에만 파랑색 주고싶을때 */
+        ul li::before{
+            content: '번호';
+            color: blue;
+        }
+        ul li::after{
+            /* before, after 가상요소는 content 속성이 필수(글을쓰던 도형을 넣던, 도형은 비워놔야함.). */
+            /* 도형을 표현할 때는 display 속성이 필수. */
+            content:'';
+            width: 5px;
+            height: 5px;
+            background: red;
+            display: inline-block;
+            /* 원 만들때 */
+            border-radius: 50%;
+            
+        }
+    </style>
+
+<body>
+    
+
+    <!-- ul>li{$}*10, 앞에 번호라는 글씨 넣는걸 까먹었을때 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+</body>
+</html>

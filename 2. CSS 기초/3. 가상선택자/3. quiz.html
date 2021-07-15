@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 홀수번째 요소만 배경yellow */
+        #list li:nth-child(2n+1){
+            background: yellow;
+        }
+        /* 2. 짝수 요소 배경 gray */
+        #list li:nth-child(2n){
+            background: gray;
+        }
+        /* 3. 첫번째 요소만 폰트색 red */
+        #list li:first-child{
+            color: red;
+        }
+        /* 4. 마지막 요소만 폰트색 freen */
+        #list li:last-child{
+            color: green;
+        }
+        /* 5. 2번째 요소만 이탈릭체 */
+        #list li:nth-child(2){
+            font-style: italic;
+        }
+        /* 6. 3번째 이전 요소만 선택후 border:2px dotted aqua 적용 */
+        #list li:nth-child(1){
+            border: 2px dotted aqua;
+        }
+        #list li:nth-child(2){
+            border: 2px dotted aqua;
+        }
+        /* 7. 3번째 이후요소만 선택후
+        border 2px dashed violet 적용 */
+        #list li:not(.a){
+            border: 2px dashed violet;
+        }
+
+        /* 6번 */
+        /* #list li:nth-child(1),li:nth-child(2)  */
+        /* #list li:nth-child(2-n){} */
+
+        /* 7번 */
+        /* #list li:nth-child(2)~li{} */
+        /* #list li:nth-child(n+3) */
+    </style>
+
+
+
+</head>
+<body>
+    <!-- (div생략가능)#wrap>ul#list>li{리스트$}*7 -->
+    <div id="wrap">
+        <ul id="list">
+            <li class="a">리스트1</li>
+            <li class="a">리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+            <li>리스트6</li>
+            <li>리스트7</li>
+        </ul>
+    </div>
+</body>
+</html>

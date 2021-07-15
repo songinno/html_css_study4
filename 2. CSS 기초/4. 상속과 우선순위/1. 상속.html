@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .eco{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /* 위에 것들 상속x */
+            font-size: 3em;
+            color: violet;
+            /* 상속되어버림. eco한테만 걸었는데 */
+        }
+        .animal{
+            background: skyblue;
+            /* 자식 없어서 상속x */
+        }
+        .plant{
+            color: orange;
+            /* 자식들한테 상속되어버림. plant한테만 걸었는데 */
+        }
+        /* 상속하기 싫을때 골라서 해주면됨. */
+        .plant>div:nth-child(2){
+            font-size: 24px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- (div).eco>.animal+.plant>div*3 -->
+    <div class="eco">생태계
+        <div class="animal">동물</div>
+        <div class="plant">식물
+            <div>소나무</div>
+            <div>튤립</div>
+            <div>해바라기</div>
+        </div>
+    </div>   
+
+
+
+</body>
+</html>

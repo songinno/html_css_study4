@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #fruits li:first-child{
+            color: red;
+        }
+        #fruits li:last-child{
+            color: yellowgreen;
+        }
+        #fruits li:nth-child(5){
+            color: yellow;
+        }
+        /* 2n : 0,2,4,6,8,...->짝수, or 'even'이라고 해도 됨. */
+        #fruits li:nth-child(2n){
+            background: gray;
+        }
+        /* 2n+1 : 1,3,5,7,... ->홀수, or 'odd' */
+        #fruits li:nth-child(2n+1){
+            background: aqua;
+        }
+        /* li중 1,4,7번째 요소에 italic체 적용 = 3n+1 (방정식을 이용) */
+        #fruits li:nth-child(3n+1){
+            font-style: italic;
+        }
+        /* 8-(1)볶음밥한테 주려고 할때, p의 첫째한테 주려고 하면 안됨. 태그 이름이랑 상관없이.
+        순서대로임. */
+        .food p:nth-child(1){
+            font-size: 1.5em;
+        }
+        /* 8-(2)p중에 첫째한테 주고싶을때는 */
+        .food p:nth-of-type(1){
+            font-size: 1.5em;
+        }
+
+        #fruits li:not(.orange){
+            /* list-style:none; -> li태그의 앞에 점 제거 */
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- ul#fruits>li*7+tab -->
+    <ul id="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>자몽</li>
+        <li>라임</li>
+    </ul>
+
+    <!-- .food>div+p*2+span+tab -->
+    <!-- div 자식들 이름들이 다 다름. nth 주의점 -->
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>짬뽕</p>
+        <span>탕수육</span>
+    </div>
+
+</body>
+</html>

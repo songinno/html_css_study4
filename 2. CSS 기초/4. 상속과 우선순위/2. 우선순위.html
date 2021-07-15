@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            color: red ;
+        }
+        /* 1점 */
+        #c-y{
+            color: yellow;
+        }
+        /* 100점 */
+        .c-g{
+            color: green ;
+        }
+        /* 10점 */
+        div{
+            color: blue;
+        }
+        /* 1점 */
+        body{
+            color: aqua;
+        }
+
+        #aaa .bbb h1{
+            color: gray;
+        }
+        /* 100점+10점+1점 */
+        div#aaa div.bbb h1{
+            color: pink;
+        }
+        /* 1점+100점+1점+10점+1점 */
+        .bbb h1{
+            color: orangered;
+        }
+        /* 10점+1점 */
+        div#aaa .bbb h1{
+            color: greenyellow;
+        }
+        /* 1+100+10+1 */
+
+    </style>
+</head>
+<body>
+    
+    <div id="c-y" class="c-g" style="color: orange;">hello</div>
+    <!-- 1000점 -->
+
+    <div id="c-y" class="c-g">hello2</div>
+
+    <div  class="c-g">hello3</div>
+
+    <div>hello4</div>
+
+    <p>hello5</p>
+    <!-- 아쿠아색 (상속되어서) -->
+
+    <div id="aaa">
+        <div class="bbb">
+            <h1>메롱메롱</h1>
+        </div>
+    </div>
+
+</body>
+</html>
