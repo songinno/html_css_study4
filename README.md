@@ -33,3 +33,5 @@ github.com/kokokaki
 ## 글자 확대 축소 설정 방법
 - 파일 -> 기본설정 -> 바로가기 키 ->  글꼴 검색  -> 단축키 지정 (ex: 컨트롤 + , 컨트롤 -)
 
+## reset.css cdn
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">`

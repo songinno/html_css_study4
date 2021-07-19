@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* html 태그의 기본 폰트사이즈 : 16px */
+    html{
+        font-size: 10px;
+    }
+    /* px은 고정단위. 창사이즈가 줄어도 같이 줄어들지 않음. */
+    /* %는 부모 대비 몇%인지. root를 %로 하면, body의 자식이라, 창사이즈 움직이면 같이 움직임. */
+    div{
+        border: 2px solid gray;
+    }
+    .root{
+        font-size: 16px;
+        width: 100em;
+    }
+    /* 왜1600? : 폰트사이즈 대비.-> 100x16=1600 */
+    /* 왜쓸까 : 텍스트 박스에서 글자 크기가 커졌는데 박스 크기도 같이 조절되길 원할 때.. 이런 경우*/
+    .parent{
+        width: 50%;
+        font-size: 32px;
+        /* = font-size: 2em 이랑 같음. */
+        height: 30rem;
+        /* rem : html의 폰트사이 대비. 10x30 */
+    }
+    .child{
+        width: 50%;
+    }
+</style>
+
+</head>
+<body>
+    
+    <!-- .root>.parent>.child*2 + tab -->
+    <div class="root">root
+        <div class="parent">parent
+            <div class="child">child1</div>
+            <div class="child">child2</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 550px;
+            height: 350px;
+            border: 2px dashed gray;
+              
+            background-color: orange;
+            background-image: url('img/sky.jpg');
+            /* 사진크기가 지정한것보다 커서 잘려서 나옴. */
+            background-size: 150px 150px;
+            /* ->바둑판처럼 나옴. background-repeat 속성 기본설정 때문에 */
+            background-repeat: no-repeat;
+            background-position: 20px 50%;
+            /* 앞 가로(0%~100%), 뒤 세로(0%~100%) */
+            /* center는 한번만 써도됨. */
+            background-size: cover;
+
+            /* 한줄로 쓰려면 -> background: orange url('img/sky.jpg') no-repeat center / cover; */
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hello{
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            display: block;
+            width: 400px;
+            height: 200px;
+
+            /* width랑 height 지정x <- inline이라서. */
+            /* 강제로 블록으로 바꿀수 있음. 그럼 가로세로 지정 가능 */
+        }
+        a{
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            /* 인라인성질을 유지하면서 가로세로를 지정하고싶을때 inline-block (수평배치, 가로세로지정x) */
+            display: inline-block;
+        }
+        input{
+            width: 100px;
+            height: 100px;
+            /* 수평배치되어있는데 가로세로 수정 됨. 기본값이 inline-block임. */
+            display: ;
+            /*  */
+        }
+        input:nth-child(3){
+            display: none;
+            /* 없어짐. */
+        }
+        input:nth-child(4){
+            /* 투명도 설정 opacity :  1(불투명)~0(투명) */
+            opacity: 0;
+            /* display none과 비교 : none은 아예 사라짐 자리도 없어짐. 투명도 0으로 하면 자리는 있고 안보일뿐 */
+        }
+    </style>
+
+
+</head>
+<body>
+    <span id="hello">안녕하세요!</span>
+
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+    
+    <div class="box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+    </div>
+
+    <script>
+        hello.onclick = e => {
+            hello.style.display = 'none'
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 300px;
+            height: 250px;
+            border: 4px solid #000;
+            overflow: auto;
+            /* auto로 하면 안넘치면 스크롤 안만들어줌. 넘치면 스크롤 알아서 만들어줌(좋음) */
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            font-size: 40px;
+        }
+        .child:hover{
+            opacity: 0.4;
+            /* 0.4 = .4로 쳐도 됨 */
+        }
+    </style>
+
+
+</head>
+<body>
+    
+<!-- .parent>.child{$}*3 -->
+<div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+
+</body>
+</html>

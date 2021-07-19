@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        .box1{
+            background: tomato;
+            border-style: dashed;
+            border-width: 10px;
+            border-color: orange;
+        }
+        .box2{
+            background: aqua;
+            /* 단축속성, 순서 상관없음. */
+            border: 4px dotted yellowgreen;
+            
+        }
+        .box3{
+            background: red;
+            /* 테두리를 아래만 치고싶을때 */
+            border-bottom: 4px solid yellow;
+            /* 아래쪽 선 색깔만 바꾸고싶을때 */
+            border-bottom-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .box.box$*3 + tab -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+</body>
+</html>
