@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            /* 해결방안 2. 컨테이너한테 overflow hidden (또는 auto), 별로 안좋은 방법, 실무에서는 종종 쓰임 */
+            /* overflow: hidden; */
+        }
+        .container2{
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+        }.container3{
+            width: 700px;
+            padding: 20px;
+            border: 3px solid orange;
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 10px;
+            float: left;
+            /* 이상해짐-> 부모박스의 높이값이 상실됨.  */
+            /* 해결방안 1,2,3 */            
+        }
+
+        /* 해결방안 1. (좋지 않은 방법) 
+         .clearbox{ 
+            clear: both;
+        }*/
+
+        /* 해결방안 3 좋은방법. */
+        /* .container::after{
+            clear: both;
+            content: '';
+            display: block;
+        } */
+        /* 단점 : 컨테이너가 많아지면 복붙을 계속 해줘야해서 코드 중복이 많이 일어남(유지보수가 어려워짐) */
+
+        /* 해결방안4. 제일좋음. */
+        .clearfix::after{
+            clear: both;
+            content: '';
+            display: block;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <!-- 해결방안4 clearfix 클래스  -->
+<div class="container clearfix">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <!-- <div class="clearbox"></div> -->
+</div>
+
+<div class="container2 clearfix">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="container3 clearfix">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>

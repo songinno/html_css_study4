@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+        .container{
+            background: gray;
+            border: 2px double rgba(53, 53, 184, 0.842);
+            width: 600px;
+            height: 400px;
+            margin: 20px auto 0;
+        }
+        .container h1{
+            font-size: 1.6em;
+            font-weight: bold;
+            font-family: cursive;
+            text-align: center;
+            background: rgb(180, 167, 167);
+            padding: 5px;
+        }
+        .container h2{
+            background: #000;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            text-align: center;
+        }
+        .container ul{
+            padding: 20px 10px;
+            background: rgb(70, 70, 70);
+        }
+        .container ul li{
+            width: 25%;
+            height: 300px;
+            float: left;
+        }
+        .container ul li#tulip{
+            background: red;
+           
+        }
+        .container ul li#jebi{
+            background: purple;
+        }.container ul li#hobak{
+            background: tomato;
+        }.container ul li#sunflower{
+            background: yellow;
+        }
+        .container ul li .img-box{
+            margin: 3px;
+            /* border: 2px solid black; */
+            width: 135px;
+            height: 100px;
+            padding: 2px;
+        }
+        .container ul li .a{
+            background-image: url('../7.\ 배경/img/tulip.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container ul li .b{
+            background-image: url('../img/jebi.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }.container ul li .c{
+            background-image: url('../img/hobak.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }.container ul li .d{
+            background-image: url('../img/sunflower.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .clearfix::after{
+            clear: both;
+            content: '';
+            display: block;
+        }
+        p{
+           font-size: 13px;
+            padding: 5px;
+            margin-top: 20px;
+            text-align: justify;
+            text-indent: 5px;
+            line-height: 1.4;
+        }
+        span{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>나의 아름다운 정원</h1>
+
+        <h2 class="intro">사람들은 아마 자신에게 <span class="yellow">자신감을 북돋워 주는</span> 표정 있는 꽃들을 선호할 것이다.</h2>
+
+        <ul class="gallery clearfix">
+            <li id="tulip">
+                <div class="img-box a">
+                
+                </div>
+                <p>
+                    너무 화려하지 않으며 고귀한 느낌을 가지고 있다.
+                    붉은 색이 단연 으뜸이며 한 송이만 있어도 빼어나다.
+                </p>
+            </li>
+            <li id="jebi">
+                <div class="img-box b" >
+                
+                </div>
+                <p>
+                    드물게 푸른색을 띠고 있으며 작지만 시원해 보이는
+                    어린 꽃이라고 할 수 있다. 여럿이 함께 있을 때 더욱 아름답다.
+                </p>
+            </li>
+            <li id="hobak">
+                <div class="img-box c">
+                  
+                </div>
+                <p>
+                    색도 모양도 화려하며 이름과 걸맞지 않게 아름다운 꽃으로
+                    매우 완숙한 이미지를 풍기는 꽃이다.
+                </p>
+            </li>
+            <li id="sunflower">
+                <div class="img-box d">
+                
+                </div>
+                <p>
+                    태양만 바라보는 일편단심의 꽃으로 얼굴이 큰 편에
+                    속하며 송이가 적어야 제격이다.
+                </p>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

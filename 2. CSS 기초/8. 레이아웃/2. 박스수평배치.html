@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,13 @@
     <title>Document</title>
 
     <style>
-        .box{
+        .container{
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box {
             width: 150px;
             height: 100px;
             background: orange;
@@ -17,45 +24,48 @@
             text-align: center;
             /* 텍스트 상하 중앙정렬 : line-height와 height를 맞춤 */
             line-height: 100px;
-            
+
 
             /* 수평배치 */
             float: left;
         }
+
         /* 4번부터는 밑으로 내려와서 수평배치 해야함->4번부터는 float를 해제해야함
          */
-         /* 7번부터 다시 밑으로 내려와서 수평배치 -> 7번 해제 */
+        /* 7번부터 다시 밑으로 내려와서 수평배치 -> 7번 해제 */
         /* .box:nth-child(4), .box:nth-child(7) */
-            /* clear: left; */
-            /* 일일이 다 쓸 수 없으니 */
-        .box:nth-child(3n+1){
+        /* clear: left; */
+        /* 일일이 다 쓸 수 없으니 */
+        .box:nth-child(3n+1) {
             clear: both;
+            /* left, right 따로 할필요 없이 both로 둘다 가능. */
         }
-            /* n앞의 숫자로 열을 제어함. */
-      
-        
-          
-      
-       
-        
+
+        /* n앞의 숫자로 열을 제어함. */
+
+
     </style>
 
 </head>
+
 <body>
     
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
-    <div class="box">7</div>
-    <div class="box">8</div>
-    <div class="box">9</div>
-    <div class="box">10</div>
-    <div class="box">11</div>
-    <div class="box">12</div>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
 
 
 </body>
+
 </html>

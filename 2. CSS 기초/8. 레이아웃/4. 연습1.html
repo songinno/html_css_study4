@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <style>
+        .container{
+            width: 500px;
+            border: 2px solid red;
+        }
+        .box{
+            height: 100px;
+            width: 23%;
+            margin: 1%;
+            border: 2px solid #000;
+            background: orange;
+            box-sizing: border-box;
+            float: left;
+        }
+        .clearfix::after{
+            clear: both;
+            content: '';
+            display: block;
+        /* 박스 4개 수평배치, .container는 건들면안됨. */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+</body>
+</html>
