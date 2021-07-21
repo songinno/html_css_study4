@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 스택 오더 중요함. */
+        .container{
+            display: flex;
+            /* 이거 쓰면 float랑 clear안해도됨. 근데 float 알아두긴해야함 */
+        }
+        .container .box{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            font-size: 30px;
+            margin-right: -30px;
+
+            position: relative;
+            /* 모두에게 포지션 속성 주니, 처음과 같아짐.(교안 3번) */
+        }
+        .container .box:nth-child(even){
+            margin-top: 30px;
+        }
+        /* 누가 누구를 깔고 앉고있냐 -> 요소 배치 순서 */
+
+        .box3{
+            position: relative;
+        }
+        /* ->3번이 포지션 속성을 받으니 4번 깔아뭉겜.(교안 1번) */
+        .box4{
+            z-index: 1;
+        }
+        /* ->4번이 맨 위로 올라옴(교안 2번) */
+        .box5{
+            z-index: 2;
+            /* -> 5가 다시 4 깔아뭉겜 */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- .container>.box.box${$}*5 -->
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background: orange;
+        border: 4px dashed red;
+        font-size: 30px;
+    }
+    .box:nth-child(2){
+        position: absolute;
+        /* ->3번이 사라짐. 2번 박스 뒤에 있음. 2번이 없다고 생각하게 됨. float처럼 z축으로 튀어나옴.*/
+        right: 10px;
+        top: 20px;
+        
+
+    }
+
+</style>
+
+</head>
+<body>
+    
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 8000px;
+        }
+        header{
+            width: 100%;
+            border-bottom: 1px solid gray;
+            position: fixed;
+        }
+        header h1{
+            float: left;
+            margin: 0;
+            font-size: 40px;
+            margin-left: 20px;
+            margin-top: 15px;
+            color: skyblue;
+        }
+        header ul{
+            float: right;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header ul li{
+            float: left;
+            margin-right: 30px;
+            list-style: none;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .arrow-box{
+            position: fixed;
+            bottom: 5%;
+            right: 2%;
+
+        }
+        .arrow-box a{
+            font-size: 75px;
+            text-decoration: none;
+            color: red;
+            font-weight: 700;
+
+            /* background: orange; */
+            /* width: 300px; */
+            /* height: 300px; */
+            /* display: block; */
+            /* position: fixed; 
+             a태그는 인라인 요소인데, position 앱솔이나 fixed을 걸면, 자동으로 디스플레이가 블록으로 바뀜 
+            bottom: 5%;
+            right: 2%; */
+
+            /* fixed를 a태그에 거는건 안좋음.
+            애로우 박스 자체에 만드는게 좋음(블록요소에다가). */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header class='clearfix'>
+        <h1>My Home</h1>
+        <ul>
+            <li>소개</li>
+            <li>커뮤니티</li>
+            <li>자료실</li>
+            <li>로그인</li>
+        </ul>
+    </header>
+
+    <div class="arrow-box">
+        <a href="#">↑</a>
+    </div>
+</body>
+</html>
