@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: fit-content;
+            /* 인라인요소처럼 안쪽 컨텐츠 크기에 맞게 길이가 지정되는거 */
+            display: flex;
+            margin: 50px auto 0;
+           
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+            background: tomato;
+            border-radius: 10px;
+            font-size: 30px;
+
+            /* 텍스트 중앙정렬 : line-height를 height값과 같게함. */
+            text-align: center;
+            line-height: 100px;
+
+            /* 그림자효과 : box-shadow랑 text-shadow 2개 있음. 
+            ex) box-shadow : 가로그림자길이 세로그림자길이 블러효과크기 색상 (띄어쓰기로)*/
+            box-shadow:5px 5px 10px rgb(42, 18, 177);
+
+            margin-right: -30px;
+
+            /* 애니메이션효과 추가 */
+            transition: 0.7s;
+        }
+        .container .box:hover{
+            background: yellowgreen;
+            border-color: yellow;
+            position: relative;
+            bottom: 20px; 
+            /* 애니메이션효과  추가 
+            transform: translateY(-20px); */
+            /* 이거 쓸때는 position bottom 쓰면안됨. */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: orange;
+            margin: 50px;
+            font-size: 30px;
+            transition: 1s;
+
+        }
+        .box1:hover{
+            /* 회전, 양수각도는 시계반향. */
+            transform: rotate(720deg);
+        }
+        .box2:hover{
+            /* 이동 */
+            /* 포지션으로 이동하는거랑 중첩x */
+
+            /* transform: translateX(100px); */
+
+            /* transform: translateY(50px); */
+
+            transform: translate(30px, 30px);
+        }
+        .box3:hover{
+            /* 확대,축소 : 배수를 넣어줌 */
+            transform: scale(1.2);
+        }
+        .box4:hover{
+            /* 비틀기 */
+            /* transform: skewX(30deg); */
+            /* transform: skewY(30deg); */
+            transform: skew(30deg, -15deg);
+        }
+        .box5:hover{
+            transform: scale(1.2) rotate(720deg) translate(100px, -100px)
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        .box:hover{
+            /* 커졌다 줄어들게 하고 싶음 */
+            animation-name: grow-up;
+            /* ->애니메이션 이름 정해줌. */
+
+            animation-duration: 3s;
+
+            /* 반복횟수, 무한 : infinite */
+            /* animation-iteration-count: 3;
+
+            animation-timing-function: linear;
+
+            animation-direction: alternate; */
+
+            /* 한줄로 */
+            animation: grow-up 3s linear 0.5s infinite alternate;
+            /* 시간을 2개쓰면, 앞에꺼는 지속시간. 뒤에꺼가 딜레이시간. */
+        }
+        /* 애니메이션 정의 */
+        @keyframes grow-up {
+            /* 구간 설정(0%~100%) */
+            0%{
+                width: 100px;
+            }
+            50%{
+                width: 500px;
+                background: yellow;
+            }
+            100%{
+                width: 300px;
+                background: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

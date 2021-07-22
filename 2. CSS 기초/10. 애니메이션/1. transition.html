@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 50px;
+
+            /* transition-property: background, width; */
+            /* 일일이 지정가능. */
+            /* all이 기본값 */
+            /* transition-duration: 1.5s; */
+            /* 위에 둘이 세트임. property랑 duration*/
+            /* 1s=1000ms */
+
+            /* 단축속성이라 한줄로도 가능. all 생략 가능. */
+            /* transition: all 1.5s; */
+
+            /* transition: width 1.5s, background 0.5s; */
+            /* 이렇게 각각 지정도 가능. */
+
+            /* transition: 1.2s;
+            transition-delay: 1s; */
+            /* transition: 1.2s 1s; 
+             이렇게 한줄로도 가능. */
+
+             /* transition: 1s;
+             /* 기본값 ease. 처음에 빠르다가 느려짐. 
+             transition-timing-function: linear; */
+            /* 한줄로 */
+             transition: 1s linear;
+        }
+        .box:hover{
+            width: 300px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
