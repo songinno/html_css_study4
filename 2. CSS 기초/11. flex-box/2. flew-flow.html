@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 4px solid #000;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            /* ->flex는 무조건 한줄 유지하려고 하는 특성이 있음. width: 150px;으로 고정 픽셀 줬는데도 창 줄이면 박스 크기가 작아짐. nowrap이 기본값. wrap으로 바꿔주면 떨어짐.*/
+            /* 이 두개를 한번에 쓰는거(단축속성) -> flex-flow */
+            flex-flow: row wrap;
+        }
+        .item{
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            border-radius: 10px;    
+            font-size: 40px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+</body>
+</html>

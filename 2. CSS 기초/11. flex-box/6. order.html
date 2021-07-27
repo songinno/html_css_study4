@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 4px solid #000;
+            display: flex;
+            flex-flow: row wrap;
+            height: 400px;
+            align-items: center;
+
+        }
+        .item{
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            border-radius: 10px;    
+            font-size: 40px;
+        }
+        .item:nth-child(2){
+            order: 5;
+        }
+        .item:nth-child(4){
+            order: 3;
+            /* 나머지는 오더값 0 (0,0,0,3,5) */
+            /* 오더 값이 높을수록 오른쪽으로 밀림. 음수값도 가능. */
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+</body>
+</html>
