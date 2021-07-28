@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 4px solid #000;
+            display: flex;
+            flex-flow: row wrap;
+            height: 400px;
+            align-items: center;
+        }
+        .item{
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            border-radius: 10px;    
+            font-size: 40px;
+
+            /* ---------글씨 정중앙--------- */
+            /* (기존방법) 
+            line-height: 100px;
+            text-align: center; */
+
+            /* (flex를 이용한 방법) 
+            빨간박스를 또다른 컨테이너로 본다면, 텍스트가 item이 됨. 그래서 아래의 방법으로 글씨 정중앙 만들어도 됨. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* --------------grow------------- */
+        .item:nth-child(1){
+            /* flex-grow: 1;
+            flex-basis: 0; */
+            flex: 1;
+        }
+        .item:nth-child(2){
+            /* flex-grow: 3;
+            flex-basis: 0; */
+            flex: 3;
+        }
+        .item:nth-child(3){
+            /* flex-grow: 1;
+            flex-basis: 0; */
+            flex: 1;
+        }
+        /* 비율이 1:3:1이 아님, flex-basis의 영향을 받음. 기본값 auto. 
+        텍스트가 있거나, width가 지정되어있으면, 그 길이를 뺀 나머지 길이 비율이 1:3:1로 맞춰짐. 
+        -> flex-basis: 0;으로 해놔야 정확히 1:3:1이 됨.*/
+
+        /* =>그냥 다 빼고, flex로 각각 1,3,1 주면 됨.(단축속성) */
+
+        /* basis는 item 가로길이라고 생각하면됨. */
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+</body>
+</html>

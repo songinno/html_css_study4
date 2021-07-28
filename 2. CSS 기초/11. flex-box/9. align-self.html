@@ -10,12 +10,8 @@
             border: 4px solid #000;
             display: flex;
             flex-flow: row wrap;
-            
             height: 1000px;
-           
-            align-items: flex-end;
-            /* align-content랑 items는 박스 줄 내려오게 해서 이것저것 해봐야할듯<-상하정렬 */
-            /* stretch가 적용되려면, item 높이가 auto여야함. */
+
         }
         .item{
             width: 150px;
@@ -24,10 +20,20 @@
             border: 4px solid orange;
             border-radius: 10px;    
             font-size: 40px;
+            align-items: center;
         }
-        /* baseline은 신경x */
+        .item:nth-child(2){
+            align-self: flex-start;
+        }
+        .item:nth-child(4){
+            align-self: flex-end;
+        }
+        .item:nth-child(6){
+            align-self: stretch;
+            height: auto;
+        }
 
-
+        /* 위에서부터 동일하게 여백있게 바꿔야함. 뭐잘못됨 */
     </style>
 
 
@@ -40,10 +46,9 @@
         <div class="item">C</div>
         <div class="item">D</div>
         <div class="item">E</div>
-        <div class="item">E</div>
-        <div class="item">E</div>
-        <div class="item">E</div>
-        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
     </div>
 
 </body>
